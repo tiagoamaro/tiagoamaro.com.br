@@ -1,5 +1,5 @@
 # Ignore RubyMine folder
-/.idea
+.idea/
 
 # Ignore database.yml
 /config/database.yml
