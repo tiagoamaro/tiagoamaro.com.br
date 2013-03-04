@@ -7,13 +7,9 @@
         <span class="icon-bar"></span>
       </button>
       <a class="brand" href="<%= root_path %>">Tiago Amaro</a>
+
       <div class="nav-collapse collapse">
-        <ul class="nav">
-          <%= nav_link("Home", root_path) %>
-          <%= nav_link("Twitter", static_path("twitter")) %>
-          <%= nav_link("Know-how", static_path("knowhow")) %>
-          <%= nav_link("Blog", posts_path) %>
-        </ul>
+        <%= render_navigation %>
       </div>
     </div>
   </div>

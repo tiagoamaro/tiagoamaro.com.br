@@ -155,6 +155,8 @@ GEM
       multi_json (~> 1.0)
       rubyzip
       websocket (~> 1.0.4)
+    simple-navigation (3.10.0)
+      activesupport (>= 2.3.2)
     sorcery (0.8.1)
       bcrypt-ruby (~> 3.0.0)
       oauth (~> 0.4.4)
@@ -203,6 +205,7 @@ DEPENDENCIES
   rails (= 3.2.12)
   rspec-rails
   sass-rails (~> 3.2.3)
+  simple-navigation
   sorcery
   spork
   sqlite3
