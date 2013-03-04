@@ -1,10 +1,10 @@
 <% @posts.each do |post| %>
-    <div class="span10 post">
+    <div class="span12 post">
       <h2 class="title">
-        <%= link_to post.title, post_path(post, page: params[:page]) %>
+        <%= link_to post.title, post_path(post, page: params[:page], s: params[:s]) %>
       </h2>
 
-      <div class="body"><%= truncate(post.body, length: 150) %></div>
+      <div class="body"><%= truncate(post.body, length: 140) %></div>
       <small class="when">Posted on <%= l post.created_at, format: :small %></small>
     </div>
 <% end %>

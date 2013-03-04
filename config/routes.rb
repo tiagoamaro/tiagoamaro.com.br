@@ -6,6 +6,9 @@ CurriculumV2::Application.routes.draw do
   end
 
   # Resources
+  namespace :posts do
+    get :search
+  end
   resources :posts
 
   # HighVoltage Static Pages

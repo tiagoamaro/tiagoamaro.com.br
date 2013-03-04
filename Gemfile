@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
+gem 'jquery-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -13,6 +14,7 @@ gem 'mercury-rails'
 gem 'paperclip'
 gem 'kaminari'
 gem 'simple-navigation'
+gem 'cancan'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -35,7 +37,10 @@ group :test do
   gem 'capybara-webkit'
 end
 
-gem 'jquery-rails'
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

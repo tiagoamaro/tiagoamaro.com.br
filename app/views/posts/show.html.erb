@@ -9,5 +9,11 @@
 </div>
 
 <div class="span12">
-  <%= link_to 'Back', posts_path(page: params[:page]) %>
+  <small>
+    Posted by <%= @post.user.nickname %>
+  </small>
+
+  <div>
+    <%= link_to 'Back', posts_path(page: params[:page], s: params[:s]) %>
+  </div>
 </div>

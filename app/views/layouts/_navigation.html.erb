@@ -10,6 +10,11 @@
 
       <div class="nav-collapse collapse">
         <%= render_navigation %>
+
+        <form action="<%= posts_search_path %>" method="GET" class="navbar-form pull-right">
+          <input class="span2" type="search" name="s" placeholder="Search on blog..." maxlength="<%= Post::SEARCH_MAX_LENGTH %>" value="<%= params[:s] %>">
+          <button type="submit" class="btn">Search</button>
+        </form>
       </div>
     </div>
   </div>

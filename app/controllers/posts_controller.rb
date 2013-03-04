@@ -1,4 +1,17 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
+  skip_authorize_resource :only => [:index, :show, :search]
+
+  # POST /posts/search
+  def search
+    @posts = Post.where("body LIKE :search OR title LIKE :search", search: "%#{params[:s]}%").order(:updated_at).page(params[:page])
+
+    respond_to do |format|
+      format.html { render "posts/index" }
+    end
+  end
+
   # GET /posts
   def index
     @posts = Post.order(:updated_at).page(params[:page])
@@ -10,8 +23,6 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   def show
-    @post = Post.find(params[:id])
-
     respond_to do |format|
       format.html
     end
@@ -19,8 +30,6 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
-
     respond_to do |format|
       format.html
     end
@@ -28,13 +37,10 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
-    @post = Post.find(params[:id])
   end
 
   # POST /posts
   def create
-    @post = Post.new(params[:post])
-
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -46,8 +52,6 @@ class PostsController < ApplicationController
 
   # PUT /posts/1
   def update
-    @post = Post.find(params[:id])
-
     respond_to do |format|
       if @post.update_attributes(params[:post])
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
@@ -59,7 +63,6 @@ class PostsController < ApplicationController
 
   # DELETE /posts/1
   def destroy
-    @post = Post.find(params[:id])
     @post.destroy
 
     respond_to do |format|
