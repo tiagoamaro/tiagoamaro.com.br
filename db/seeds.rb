@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(username: "admin", password: "admin123")
-Post.create(title: "Title#1", body: "Body#1", user: User.find_by_username("admin"))
-Post.create(title: "Title#2", body: "Body#2", user: User.find_by_username("admin"))
-Post.create(title: "Title#3", body: "Body#3", user: User.find_by_username("admin"))
-Post.create(title: "Title#4", body: "Body#4", user: User.find_by_username("admin"))
-Post.create(title: "Title#5", body: "Body#5", user: User.find_by_username("admin"))
+User.find_or_create_by_username(username: "admin", password: "admin123", nickname: "Tiago Amaro")
+100.times do |index|
+  alphabet =  [('a'..'z'),('A'..'Z')].map{|i| i.to_a}.flatten
+  string  =  (0...350).map{ alphabet[rand(alphabet.length)] }.join
+  Post.find_or_create_by_title(title: "Title##{index}", body: string, user: User.find_by_username("admin"))
+end
