@@ -13,7 +13,6 @@ gem 'high_voltage'
 gem 'mercury-rails'
 gem 'paperclip'
 gem 'kaminari'
-gem 'simple-navigation'
 gem 'cancan'
 
 # Gems used only for assets and not required

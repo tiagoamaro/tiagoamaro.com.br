@@ -7,9 +7,13 @@
         <span class="icon-bar"></span>
       </button>
       <a class="brand" href="<%= root_path %>">Tiago Amaro</a>
-
       <div class="nav-collapse collapse">
-        <%= render_navigation %>
+        <ul class="nav">
+          <%= nav_link("Home", root_path) %>
+          <%= nav_link("Twitter", static_path("twitter")) %>
+          <%= nav_link("Know-how", static_path("knowhow")) %>
+          <%= nav_link("Blog", posts_path, posts_path) %>
+        </ul>
 
         <form action="<%= posts_search_path %>" method="GET" class="navbar-form pull-right">
           <input class="span2" type="search" name="s" placeholder="Search on blog..." maxlength="<%= Post::SEARCH_MAX_LENGTH %>" value="<%= params[:s] %>">
