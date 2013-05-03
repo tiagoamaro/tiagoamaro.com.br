@@ -1,8 +1,8 @@
 # Be sure to restart your server when you modify this file.
 
-CurriculumV2::Application.config.session_store :cookie_store, key: '_curriculum_v2_session'
+NewCurriculum::Application.config.session_store :cookie_store, key: '_new_curriculum_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rails generate session_migration")
-# CurriculumV2::Application.config.session_store :active_record_store
+# NewCurriculum::Application.config.session_store :active_record_store

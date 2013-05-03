@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-CurriculumV2::Application.load_tasks
+NewCurriculum::Application.load_tasks

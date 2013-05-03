@@ -1,22 +1,4 @@
-CurriculumV2::Application.routes.draw do
-  # Mercury WYSIWYG
-  mount Mercury::Engine => '/'
-  namespace :mercury do
-    resources :images
-  end
-
-  # Resources
-  namespace :posts do
-    get :search
-  end
-  resources :posts
-
-  # HighVoltage Static Pages
-  match '/:id' => 'high_voltage/pages#show', :as => :static, :via => :get
-
-  #Root
-  root :to => 'high_voltage/pages#show', :id => 'home'
-
+NewCurriculum::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
