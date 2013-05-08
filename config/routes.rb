@@ -1,5 +1,5 @@
 NewCurriculum::Application.routes.draw do
-  root :to => "application#index"
+  root :to => 'high_voltage/pages#show', :id => 'index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
