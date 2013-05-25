@@ -1,0 +1,9 @@
+@import "foundation_and_overrides";
+
+$bg: $secondary-color;
+$padding: $panel-padding;
+
+.home-panel { 
+	@include panel($bg, $padding);
+	margin-right: emCalc(20px);
+}
