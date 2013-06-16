@@ -7,9 +7,9 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 gem 'high_voltage'
+gem 'jquery-rails'
 gem 'gravatar_image_tag'
-
-
+  
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -23,12 +23,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
-
 group :development do
-	# Using thin for development
-	gem 'thin'
-
 	gem 'better_errors'
 	gem 'binding_of_caller'
 end
