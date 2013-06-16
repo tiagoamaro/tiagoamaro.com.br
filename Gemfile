@@ -5,7 +5,6 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'high_voltage'
 gem 'jquery-rails'
 gem 'gravatar_image_tag'
@@ -26,6 +25,7 @@ end
 group :development do
 	gem 'better_errors'
 	gem 'binding_of_caller'
+  gem 'zeus' # this shouldn't be here, but is more practical to install. Just don't run using 'bundle exec zeus' :)
 end
 
 group :test, :development do
