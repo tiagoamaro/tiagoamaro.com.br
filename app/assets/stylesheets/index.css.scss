@@ -1,9 +1,12 @@
 @import "foundation_and_overrides";
 
-$bg: $secondary-color;
-$padding: $panel-padding;
+#top-bar {
+  background: $topbar-bg;
+  position: fixed;
+  top: 0;
+  padding: 0;
+}
 
-.home-panel { 
-	@include panel($bg, $padding);
-	margin-right: emCalc(20px);
+#greetings {
+  margin-top: $topbar-height;
 }
