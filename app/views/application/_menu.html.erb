@@ -1,4 +1,4 @@
-<div class="contain-to-grid">
+<div data-magellan-expedition="fixed" id="top-bar" class="contain-to-grid">
   <nav class="top-bar">
 
     <ul class="title-area">
@@ -14,14 +14,13 @@
       <!-- Left Nav Section -->
       <ul class="left">
         <li class="divider"></li>
-        <%= nav_link('Home', root_path) %>
+        <li data-magellan-arrival="greetings"><a href="#greetings">Greetings</a></li>
         <li class="divider"></li>
-        <%= nav_link('Twitter', page_path('twitter')) %>
+        <li data-magellan-arrival="knowledge"><a href="#knowledge">Knowledge</a></li>
         <li class="divider"></li>
-        <%= nav_link('Projects', page_path('projects')) %>
+        <li data-magellan-arrival="twitter"><a href="#twitter">Twitter</a></li>
         <li class="divider"></li>
       </ul>
-
     </section>
-  </div>
-</nav>
+  </nav>
+</div>
