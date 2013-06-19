@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require foundation/foundation
-//= require foundation/foundation.magellan
+//= require foundation
 //= require_tree .
 $(document).foundation();
