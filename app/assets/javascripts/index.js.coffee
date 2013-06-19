@@ -18,7 +18,7 @@ $('#go-top').click (e) ->
 
 goTop = $('#go-top')
 $(window).scroll ->
-  if $(@).scrollTop() < minimumWindowScrollHeight
-    goTop.hide()
-  else
+  if $(@).scrollTop() > minimumWindowScrollHeight
     goTop.show()
+  else
+    goTop.hide()
