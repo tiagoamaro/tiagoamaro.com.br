@@ -1,12 +1,17 @@
 @import "foundation_and_overrides";
 
-#top-bar {
-  background: $topbar-bg;
+#go-top {
   position: fixed;
-  top: 0;
-  padding: 0;
+  bottom: 2em;
+  right: 2em;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  padding: 1em;
+  display: none;
 }
 
-#greetings {
-  margin-top: $topbar-height;
+#go-top:hover {
+  background-color: rgba(0, 0, 0, 0.6);
 }
