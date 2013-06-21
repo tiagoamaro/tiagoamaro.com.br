@@ -8,6 +8,7 @@ gem 'rails', '3.2.13'
 gem 'jquery-rails'
 gem 'gravatar_image_tag'
 gem 'font-awesome-rails'
+gem 'thin'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -17,7 +18,6 @@ group :assets do
 	gem 'zurb-foundation', '~> 4.0.0'
   gem 'compass-rails'
   gem 'haml'
-
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
