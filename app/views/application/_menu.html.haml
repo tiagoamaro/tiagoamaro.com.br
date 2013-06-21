@@ -1,0 +1,24 @@
+#top-bar.contain-to-grid
+  %nav.top-bar
+    %ul.title-area
+      -# Title Area
+      %li.name
+        %h1
+          %a{:href => root_path} Tiago Amaro
+      -# Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
+      %li.toggle-topbar.menu-icon
+        %a{:href => "#"}
+          %span Menu
+    %section.top-bar-section
+      -# Left Nav Section
+      %ul.left
+        %li.divider
+        %li
+          %a{:href => "#greetings"} Greetings
+        %li.divider
+        %li
+          %a{:href => "#knowledge"} Knowledge
+        %li.divider
+        %li
+          %a{:href => "#twitter"} Twitter
+        %li.divider

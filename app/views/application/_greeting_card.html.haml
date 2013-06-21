@@ -1,0 +1,35 @@
+#greetings
+.row
+  %h2 Greetings
+  #top-panel.large-12.columns.panel.radius
+    .row
+      .large-3.columns
+        = gravatar_image_tag("tiagocis@gmail.com", gravatar: { size: 250 }, alt: "Tiago Amaro", title: "Tiago Amaro", class: "img-circle hide-for-small")
+      .large-9.columns
+        %h2 Tiago Amaro
+        %p
+          Hi, I am a Brazilian developer with interest on
+          = succeed "," do
+            %code Ruby
+          %code JavaScript
+          and any
+          %code geeky
+          thing that leads me to curiosity.
+        %blockquote
+          The purpose of abstraction is not to be vague, but to create a new semantic level in which one can be absolutely precise
+          %cite Edsger Dijkstra
+    .row
+      #contacts.large-8.push-3.columns
+        .row
+          .large-3.columns
+            %i.icon-github.icon-2x
+              = link_to 'Github', 'http://github.com/tiagoamaro', target: '_blank'
+          .large-3.columns
+            %i.icon-github-alt.icon-2x
+              = link_to 'Gists', 'http://gist.github.com/tiagoamaro', target: '_blank'
+          .large-3.columns
+            %i.icon-twitter-sign.icon-2x
+              = link_to 'Twitter', 'http://twitter.com/tiagocis', target: '_blank'
+          .large-3.columns
+            %i.icon-envelope.icon-2x
+              %a.has-tip{'data-tooltip' => true, title: 'tiagocis@gmail.com'} E-mail
