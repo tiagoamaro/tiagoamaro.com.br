@@ -24,8 +24,8 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
-  	<%= render "menu" %>
+  <body>    
+  	<%= render "menu" unless response.status == 404 %>
     <%= yield %>
     <%= render "footer" %>
 

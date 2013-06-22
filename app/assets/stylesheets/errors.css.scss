@@ -1,0 +1,30 @@
+// Place all the styles related to the errors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@-moz-keyframes roll { 
+  100% { 
+    -moz-transform: rotate(360deg); 
+  } 
+} 
+@-o-keyframes roll { 
+  100% { 
+    -o-transform: rotate(360deg); 
+  } 
+} 
+@-webkit-keyframes roll { 
+  100% { 
+    -webkit-transform: rotate(360deg); 
+  } 
+}
+body.roll {  
+  -moz-animation-duration: 2s;  
+  -moz-animation-name: roll;  
+  -moz-animation-iteration-count: 1; 
+  -webkit-animation-duration: 2s;  
+  -webkit-animation-name: roll;  
+  -webkit-animation-iteration-count: 1; 
+  -o-animation-duration: 2s;  
+  -o-animation-name: roll;  
+  -o-animation-iteration-count: 1;   
+}

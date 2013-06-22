@@ -61,6 +61,9 @@ module NewCurriculum
     # parameters by using an attr_accessible or attr_protected declaration.
     # config.active_record.whitelist_attributes = true
 
+    # Setting the exceptions application to own router
+    config.exceptions_app = self.routes
+
     # Enable the asset pipeline
     config.assets.enabled = true
 
