@@ -25,3 +25,21 @@ role :app, 'tiagoamaro.com.br'                          # This may be the same a
 #     run '#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}'
 #   end
 # end
+
+namespace :deploy do
+  task :stop do
+    run 'pkill ruby; true'
+  end
+
+  task :bundle do
+    run "cd #{deploy_to}/current; bundle install"
+  end
+  
+  task :start do
+    run "cd #{deploy_to}/current; rails s -d -e production"
+  end
+end
+
+after 'deploy', 'deploy:stop' 
+after 'deploy', 'deploy:bundle' 
+after 'deploy', 'deploy:start' 
