@@ -1,6 +1,13 @@
 // Required global settings and mixins for Foundation
 @import "foundation/foundation-global";
 
+// Personal site theme colors:
+$themeBrown: #595241;
+$themeGray: #B8AE9C;
+$themeWhite: #FFFFFF;
+$themeBlue: #ACCFCC;
+$themeRed: #8A0917;
+
 // Settings file to override Foundation variables
 
 // You can find the variables for each component at the bottom of their
@@ -124,7 +131,7 @@
 // $paragraph-aside-font-style: italic;
 
 // We use these to style <code> tags
-// $code-color: darken($alert-color, 15%);
+$code-color: $themeRed;
 // $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
 // $code-font-weight: bold;
 
@@ -968,7 +975,7 @@
 //
 
 // Background color for the top bar
-// $topbar-bg: #111;
+$topbar-bg: $themeBrown;
 
 // Height and margin
 // $topbar-height: 45px;
@@ -987,7 +994,7 @@
 // $topbar-link-font-size: emCalc(13px);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: #333;
+$topbar-dropdown-bg: lighten($themeBrown, 20%);
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;
