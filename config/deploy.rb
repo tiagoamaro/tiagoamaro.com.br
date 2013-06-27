@@ -26,6 +26,7 @@ role :app, 'tiagoamaro.com.br'                          # This may be the same a
 #   end
 # end
 
+god_file = 'server.god'
 namespace :deploy do
   task :stop do
     run 'pkill ruby; true'
@@ -36,7 +37,7 @@ namespace :deploy do
   end
   
   task :start do
-    run "cd #{deploy_to}/current; rails s -d -e production"
+    run "cd #{deploy_to}/current; rails s -d -e production; god -c #{god_file}"
   end
 end
 
