@@ -1,7 +1,7 @@
 NewCurriculum::Application.routes.draw do
-  root :to => 'application#index'
+  root 'application#index'
 
-  match '/404', to: 'errors#not_found'
+  get '/404', to: 'errors#not_found'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
