@@ -8,7 +8,7 @@ gem 'rails', '4.0.0'
 gem 'jquery-rails'
 gem 'gravatar_image_tag'
 gem 'font-awesome-rails'
-gem 'thin'
+gem 'puma'
 
 # Gems used only for assets and not required
 # in production environments by default.
