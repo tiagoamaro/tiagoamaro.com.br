@@ -45,6 +45,7 @@ end
 
 # Deploy with Capistrano
 gem 'capistrano'
+gem 'god'
 
 # To use debugger
 # gem 'debugger'
