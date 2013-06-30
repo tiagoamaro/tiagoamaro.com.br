@@ -27,6 +27,8 @@ group :development do
 	gem 'better_errors'
 	gem 'binding_of_caller'
   gem 'zeus' # this shouldn't be here, but is more practical to install. Just don't run using 'bundle exec zeus' :)
+  gem 'guard-livereload'
+  gem 'foreman'
 end
 
 group :test, :development do
