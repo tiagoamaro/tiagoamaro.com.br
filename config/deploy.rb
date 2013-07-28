@@ -36,11 +36,16 @@ namespace :deploy do
     run "cd #{deploy_to}/current; bundle install"
   end
   
+  task :generate_secret do
+    new_secret = %x(rake secret)
+    secret_file_content = "NewCurriculum::Application.config.secret_token = '#{new_secret}'"
+    secret_file = "#{deploy_to}/current/config/initializers/secret_token.rb"
+    put secret_file_content, secret_file
+  end
+
   task :start do
     run "cd #{deploy_to}/current; rails s -d -e production; god -c #{god_file}"
   end
 end
 
-after 'deploy', 'deploy:stop' 
-after 'deploy', 'deploy:bundle' 
-after 'deploy', 'deploy:start' 
+after 'deploy', 'deploy:stop', 'deploy:bundle', 'deploy:generate_secret', 'deploy:start'
