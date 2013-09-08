@@ -29,6 +29,7 @@ group :development do
   gem 'zeus' # this shouldn't be here, but is more practical to install. Just don't run using 'bundle exec zeus' :)
   gem 'guard-livereload'
   gem 'foreman'
+  gem 'rails_best_practices'
 end
 
 group :test, :development do
