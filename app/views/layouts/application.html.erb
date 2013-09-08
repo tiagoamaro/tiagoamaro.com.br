@@ -23,10 +23,9 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target=".navbar">
   	<%= render "menu" unless response.status == 404 %>
     <%= yield %>
-    <%= render "footer" %>
 
     <%= javascript_include_tag "application" %>
   </body>
