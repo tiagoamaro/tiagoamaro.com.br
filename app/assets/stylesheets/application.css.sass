@@ -9,12 +9,11 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require foundation
  *= require font-awesome
  *= require_tree .
- *= require foundation_and_overrides
  */
 
-.img-circle {
-  border-radius: 500px;
-}
+@import "twitter/bootstrap"
+
+.img-circle
+  border-radius: 500px
