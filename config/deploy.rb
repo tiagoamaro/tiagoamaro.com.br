@@ -35,7 +35,7 @@ namespace :deploy do
   task :bundle do
     run "cd #{deploy_to}/current; bundle install"
   end
-  
+
   task :generate_secret do
     new_secret = %x(rake secret)
     secret_file_content = "NewCurriculum::Application.config.secret_token = '#{new_secret}'"
