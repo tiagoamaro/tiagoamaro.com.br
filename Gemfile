@@ -14,8 +14,8 @@ gem 'puma'
 # in production environments by default.
 gem 'sass-rails'
 gem 'coffee-rails'
-gem 'zurb-foundation', '~> 4.0.0'
 gem 'compass-rails', github: 'milgner/compass-rails', ref: '1749c06f15dc4b058427e7969810457213647fb8'
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
 gem 'haml'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
