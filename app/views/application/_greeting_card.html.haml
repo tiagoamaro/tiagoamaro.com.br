@@ -1,14 +1,15 @@
-#greetings
-  .row
+.container
+  #greetings
     %h2 Greetings
-    #top-panel.large-12.columns.panel.radius
+    .jumbotron
       .row
-        .large-3.columns
+        .col-md-3.hidden-sm
           = gravatar_image_tag("tiagocis@gmail.com", gravatar: { size: 250 }, alt: "Tiago Amaro", title: "Tiago Amaro", class: "img-circle hide-for-small")
-        .large-9.columns
-          %h2 Tiago Amaro
+        .col-md-9
+          %h2
+            %b Hi, I am Tiago Amaro
           %p
-            Hi, I am a Brazilian developer with interest on
+            a Brazilian developer with interest on
             = succeed "," do
               %code Ruby
             %code JavaScript
@@ -16,20 +17,21 @@
             %code geeky
             thing that leads me to curiosity.
           %blockquote
-            Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
-            %cite Martin Fowler
+            %p Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+            %small
+              %cite Martin Fowler
       .row
-        #contacts.large-8.push-3.columns
+        #contacts.col-md-8.col-md-offset-3
           .row
-            .large-3.columns
-              %i.icon-github.icon-2x
-                = link_to 'Github', 'http://github.com/tiagoamaro', target: '_blank'
-            .large-3.columns
-              %i.icon-github-alt.icon-2x
-                = link_to 'Gists', 'http://gist.github.com/tiagoamaro', target: '_blank'
-            .large-3.columns
-              %i.icon-twitter-sign.icon-2x
-                = link_to 'Twitter', 'http://twitter.com/tiagocis', target: '_blank'
-            .large-3.columns
-              %i.icon-envelope.icon-2x
-                %a.has-tip{'data-tooltip' => true, title: 'tiagocis@gmail.com'} E-mail
+            .col-md-3
+              %i.icon-github
+              = link_to 'Github', 'http://github.com/tiagoamaro', target: '_blank'
+            .col-md-3
+              %i.icon-github-alt
+              = link_to 'Gists', 'http://gist.github.com/tiagoamaro', target: '_blank'
+            .col-md-3
+              %i.icon-twitter-sign
+              = link_to 'Twitter', 'http://twitter.com/tiagocis', target: '_blank'
+            .col-md-3
+              %i.icon-envelope
+              %a.has-tip{'data-toggle' => 'tooltip', title: 'tiagocis@gmail.com'} E-mail
