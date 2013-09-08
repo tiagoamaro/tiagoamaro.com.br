@@ -2,7 +2,7 @@ set :application, 'website'
 set :repository,  'ssh://git@bitbucket/tiagoamaro/personal_page_v2.git'
 set :deploy_via, :copy
 set :scm, :git
-set :branch, 'foundation'
+set :branch, 'bootstrap'
 set :deploy_to, '/root/curriculum_v2'
 set :user, 'root'
 
