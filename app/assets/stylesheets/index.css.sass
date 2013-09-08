@@ -7,8 +7,10 @@
 #greetings
 	margin-top: $navbar-height + 30px
 	.jumbotron
+		padding: 30px
 		@include border-corner-radius(top, left, 30px)
 		@include border-corner-radius(bottom, right, 30px)
+		@include box-shadow(2px 2px 5px rgba(50, 50, 50, 0.75))
 	.has-tip
 		cursor: pointer
 	blockquote
